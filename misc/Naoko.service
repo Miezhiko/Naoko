@@ -1,0 +1,14 @@
+[Unit]
+Description=Naoko
+After=network.target
+After=multi-user.target
+
+[Service]
+Type=simple
+User=mawa
+WorkingDirectory=/data/contrib/rust/Naoko
+ExecStart=/bin/bash -c 'cargo run -p naoko --release'
+ExecStop=killall naoko
+
+[Install]
+WantedBy=multi-user.target
