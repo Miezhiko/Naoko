@@ -1,5 +1,9 @@
-use futures::stream::FuturesUnordered;
-use futures::{ StreamExt, TryStreamExt };
+use crate::options::IOptions;
+
+use futures::{
+  stream::FuturesUnordered,
+  StreamExt, TryStreamExt
+};
 
 use log::{ info, error };
 
@@ -32,15 +36,13 @@ async fn gpt_process(msg: OwnedMessage) -> Option<(String, String)> {
         return None;
       }
 
-      /* 
       let chan      = key3[0].parse::<u64>().unwrap_or(0);
       let user_id   = key3[1].parse::<u64>().unwrap_or(0);
       let msg       = key3[2].parse::<u64>().unwrap_or(0);
       let k_key     = format!("{chan}|{user_id}|{msg}");
-      */
 
       if let Ok(chat_result) = chat::chat(payload, "Kalmarity").await {
-        Some((key_str.to_owned(), chat_result))
+        Some((k_key, chat_result))
       } else { None }
     }, None => None
   }
@@ -96,17 +98,18 @@ async fn run_async_processor(
   });
 
   info!("Starting kafka event loop");
-  stream_processor.await.expect("Kafka stream processing failed");
+  stream_processor.await
+                  .expect("Kafka stream processing failed");
   info!("Kafka stream processing terminated");
 }
 
-pub fn run_with_workers(num_workers: u32) {
+pub fn run_with_workers(num_workers: u32, opts: IOptions) {
   std::mem::drop( (0..num_workers).map(|_| {
     tokio::spawn(run_async_processor(
-      "localhost:9092".to_owned(),
-      "kalmarity_group".to_owned(),
-      "Salieri".to_owned(),
-      "Kalmarity".to_owned(),
+      opts.kafka_address.clone(),
+      opts.kafka_group.clone(),
+      opts.kafka_sink.clone(),
+      opts.kafka_target.clone()
     ))
   }).collect::<FuturesUnordered<_>>()
     .for_each(|_| async {}) );
