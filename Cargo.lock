@@ -166,8 +166,8 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chat"
-version = "0.4.0"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#f098f9e6bacce32c7631d8e0d27e3890882abc93"
+version = "0.4.1"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#b2e24ac2342c98aef5db285d87709ef04bf1c7ce"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -181,7 +181,7 @@ dependencies = [
 [[package]]
 name = "chat-utils"
 version = "0.0.1"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#f098f9e6bacce32c7631d8e0d27e3890882abc93"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#b2e24ac2342c98aef5db285d87709ef04bf1c7ce"
 dependencies = [
  "ucd",
 ]
@@ -1213,9 +1213,9 @@ dependencies = [
 
 [[package]]
 name = "regex-syntax"
-version = "0.8.0"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3cbb081b9784b07cceb8824c8583f86db4814d172ab043f3c23f7dc600bf83d"
+checksum = "56d84fdd47036b038fc80dd333d10b6aab10d5d31f4a366e20014def75328d33"
 
 [[package]]
 name = "reqwest"
