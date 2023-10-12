@@ -40,8 +40,9 @@ async fn gpt_process(msg: OwnedMessage) -> Option<(String, String)> {
       let user_id   = key3[1].parse::<u64>().unwrap_or(0);
       let msg       = key3[2].parse::<u64>().unwrap_or(0);
       let k_key     = format!("{chan}|{user_id}|{msg}");
+      let fmode     = user_id != 510368731378089984u64;
 
-      if let Ok(chat_result) = chat::chat(payload, "Kalmarity").await {
+      if let Ok(chat_result) = chat::generate(payload, "Kalmarity", fmode).await {
         Some((k_key, chat_result))
       } else { None }
     }, None => None
