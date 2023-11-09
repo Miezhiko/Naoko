@@ -166,8 +166,8 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chat"
-version = "0.4.13"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#eb1461e92183dbf9ba77923d462731cc07018c83"
+version = "0.4.14"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#b09a8038d4faadb9015a4893e3728bd06b0e366a"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -181,7 +181,7 @@ dependencies = [
 [[package]]
 name = "chat-utils"
 version = "0.0.1"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#eb1461e92183dbf9ba77923d462731cc07018c83"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#b09a8038d4faadb9015a4893e3728bd06b0e366a"
 dependencies = [
  "ucd",
 ]
@@ -325,9 +325,9 @@ checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
 
 [[package]]
 name = "errno"
-version = "0.3.5"
+version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ac3e13f66a2f95e32a39eaa81f6b95d42878ca0e1db0c7543723dfe12557e860"
+checksum = "7c18ee0ed65a5f1f81cac6b1d213b69c35fa47d4252ad41f1486dbd8226fe36e"
 dependencies = [
  "libc",
  "windows-sys",
@@ -738,9 +738,9 @@ dependencies = [
 
 [[package]]
 name = "linux-raw-sys"
-version = "0.4.10"
+version = "0.4.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "da2479e8c062e40bf0066ffa0bc823de0a9368974af99c9f6df941d2c231e03f"
+checksum = "969488b55f8ac402214f3f5fd243ebb7206cf82de60d3172994707a4bcc2b829"
 
 [[package]]
 name = "lock_api"
@@ -828,7 +828,7 @@ dependencies = [
 
 [[package]]
 name = "naoko"
-version = "0.2.7"
+version = "0.2.8"
 dependencies = [
  "anyhow",
  "chat",
@@ -1151,9 +1151,9 @@ dependencies = [
 
 [[package]]
 name = "rdkafka"
-version = "0.34.0"
+version = "0.36.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "053adfa02fab06e86c01d586cc68aa47ee0ff4489a59469081dc12cbcde578bf"
+checksum = "d54f02a5a40220f8a2dfa47ddb38ba9064475a5807a69504b6f91711df2eea63"
 dependencies = [
  "futures-channel",
  "futures-util",
@@ -1169,9 +1169,9 @@ dependencies = [
 
 [[package]]
 name = "rdkafka-sys"
-version = "4.6.0+2.2.0"
+version = "4.7.0+2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad63c279fca41a27c231c450a2d2ad18288032e9cbb159ad16c9d96eba35aaaf"
+checksum = "55e0d2f9ba6253f6ec72385e453294f8618e9e15c2c6aba2a5c01ccf9622d615"
 dependencies = [
  "libc",
  "libz-sys",
