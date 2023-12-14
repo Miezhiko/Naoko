@@ -166,8 +166,8 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chat"
-version = "0.4.16"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#6907e4f2c0f257b6c3dd310d7f0e98ae76e3f713"
+version = "0.4.18"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#f8f21f9184aecae07be90bf557f7d3b2f670a1cc"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -181,7 +181,7 @@ dependencies = [
 [[package]]
 name = "chat-utils"
 version = "0.0.1"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#6907e4f2c0f257b6c3dd310d7f0e98ae76e3f713"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#f8f21f9184aecae07be90bf557f7d3b2f670a1cc"
 dependencies = [
  "ucd",
 ]
@@ -828,7 +828,7 @@ dependencies = [
 
 [[package]]
 name = "naoko"
-version = "0.2.8"
+version = "0.2.9"
 dependencies = [
  "anyhow",
  "chat",
@@ -1151,9 +1151,9 @@ dependencies = [
 
 [[package]]
 name = "rdkafka"
-version = "0.36.0"
+version = "0.35.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d54f02a5a40220f8a2dfa47ddb38ba9064475a5807a69504b6f91711df2eea63"
+checksum = "f16c17f411935214a5870e40aff9291f8b40a73e97bf8de29e5959c473d5ef33"
 dependencies = [
  "futures-channel",
  "futures-util",
