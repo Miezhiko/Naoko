@@ -163,8 +163,8 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
 name = "chat"
-version = "0.5.0"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#3e53ea8ddcee621b4810106830e5b758474d5517"
+version = "0.5.1"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#0825f7d8b6b3290def521ba7f459a5bcd6d4b237"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -178,7 +178,7 @@ dependencies = [
 [[package]]
 name = "chat-utils"
 version = "0.0.1"
-source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#3e53ea8ddcee621b4810106830e5b758474d5517"
+source = "git+https://github.com/Miezhiko/chat.rs.git?branch=mawa#0825f7d8b6b3290def521ba7f459a5bcd6d4b237"
 dependencies = [
  "ucd",
 ]
@@ -1490,9 +1490,9 @@ checksum = "e1fc403891a21bcfb7c37834ba66a547a8f402146eba7265b5a6d88059c9ff2f"
 
 [[package]]
 name = "tempfile"
-version = "3.10.0"
+version = "3.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a365e8cd18e44762ef95d87f284f4b5cd04107fec2ff3052bd6a3e6069669e67"
+checksum = "85b77fafb263dd9d05cbeac119526425676db3784113aa9295c88498cbf8bff1"
 dependencies = [
  "cfg-if",
  "fastrand",
